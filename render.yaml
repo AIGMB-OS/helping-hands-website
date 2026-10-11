@@ -1,0 +1,12 @@
+# Next.js web service. Remote images use next/image, so this stays a Node
+# server rather than a static site.
+services:
+  - type: web
+    name: helping-hands-website
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22.14.0"
