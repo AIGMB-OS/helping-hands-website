@@ -35,9 +35,9 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-card/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-6xl items-center gap-4 px-5 py-3">
+      <div className="mx-auto flex max-w-6xl items-center gap-3 px-5 py-1.5">
         <Link href="/" className="shrink-0 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pine">
-          <LogoMark className="h-11 w-auto sm:h-12" priority />
+          <LogoMark className="h-14 w-auto sm:h-16" priority />
         </Link>
         <nav aria-label="Primary" className="ml-auto hidden items-center gap-1 xl:flex">
           {nav.map((item) => {
@@ -95,26 +95,6 @@ export function SiteHeader() {
           </SheetContent>
         </Sheet>
       </div>
-      <nav
-        aria-label="Get help, volunteer, or donate"
-        className="grid grid-cols-3 border-t border-border xl:hidden"
-      >
-        {quickLinks.map((item) => {
-          const current = isCurrent(pathname, item.href);
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              aria-current={current ? "page" : undefined}
-              className={`border-l border-border px-2 py-2.5 text-center text-sm font-semibold first:border-l-0 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pine ${
-                current ? "bg-secondary text-secondary-foreground" : "text-pine"
-              }`}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
-      </nav>
     </header>
   );
 }

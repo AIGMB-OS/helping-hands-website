@@ -1,16 +1,14 @@
-import { buttonVariants } from "@/components/ui/button";
 import { cn } from "cn";
-import type { VariantProps } from "class-variance-authority";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type ButtonLinkProps = {
-  href: string;
-  children: ReactNode;
-  className?: string;
-  variant?: VariantProps<typeof buttonVariants>["variant"];
-  size?: VariantProps<typeof buttonVariants>["size"];
-  external?: boolean;
+type ButtonVariant = "default" | "outline" | "secondary" | "dark";
+
+const variantClass: Record<ButtonVariant, string> = {
+  default: "btn btn-primary",
+  outline: "btn btn-secondary",
+  secondary: "btn btn-primary",
+  dark: "btn btn-dark",
 };
 
 export function ButtonLink({
@@ -18,14 +16,16 @@ export function ButtonLink({
   children,
   className,
   variant = "default",
-  size = "lg",
   external,
-}: ButtonLinkProps) {
-  const classes = cn(
-    buttonVariants({ variant, size }),
-    "h-11 px-4 text-base",
-    className,
-  );
+}: {
+  href: string;
+  children: ReactNode;
+  className?: string;
+  variant?: ButtonVariant;
+  size?: string;
+  external?: boolean;
+}) {
+  const classes = cn(variantClass[variant], className);
   const isExternal =
     external ?? (href.startsWith("http://") || href.startsWith("https://"));
 
@@ -58,15 +58,13 @@ export function TextLink({
   href: string;
   children: ReactNode;
 }) {
-  const className =
-    "font-semibold text-pine underline decoration-teal decoration-2 underline-offset-[0.2em] hover:decoration-pine";
   const external = href.startsWith("http://") || href.startsWith("https://");
 
   if (external) {
     return (
       <a
         href={href}
-        className={className}
+        className="link"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -78,14 +76,14 @@ export function TextLink({
 
   if (href.startsWith("mailto:") || href.startsWith("tel:")) {
     return (
-      <a href={href} className={className}>
+      <a href={href} className="link">
         {children}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={className}>
+    <Link href={href} className="link">
       {children}
     </Link>
   );

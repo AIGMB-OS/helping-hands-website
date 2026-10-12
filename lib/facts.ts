@@ -30,6 +30,7 @@ export const nav = [
   { href: "/", label: "Home" },
   { href: "/get-help", label: "Get Help" },
   { href: "/programs", label: "Programs" },
+  { href: "/partners", label: "Partners" },
   { href: "/volunteer", label: "Volunteer" },
   { href: "/donate", label: "Donate" },
   { href: "/events", label: "Events" },
@@ -131,7 +132,7 @@ export const ministryContacts: ContactRow[] = [
     role: "Christmas stockings",
     contact: "carol.brown@denverumc.org",
     href: "mailto:carol.brown@denverumc.org",
-    source: "October 2026 newsletter. Different email from Birdies and the garden.",
+    source: "October 2026 newsletter, Christmas stockings",
   },
   {
     name: "Wally Mlynarski",
@@ -173,7 +174,7 @@ export const ministryContacts: ContactRow[] = [
     role: "Foster-family details",
     contact: "amber.mayo@lincolncountync.gov",
     href: "mailto:amber.mayo@lincolncountync.gov",
-    source: "October 2026 newsletter. Different person from Amy Ramsey.",
+    source: "October 2026 newsletter",
   },
   {
     name: "Sue Gauthier",
@@ -271,6 +272,6 @@ export const ministryContacts: ContactRow[] = [
     role: "Half-triathlon fundraiser",
     contact: "Support Helping Hands! form",
     href: donateFormUrl,
-    source: "Support Helping Hands and the October newsletter. No personal email is listed.",
+    source: "Support Helping Hands",
   },
 ];

@@ -1,5 +1,4 @@
 import { TextLink } from "@/components/button-link";
-import { Note } from "@/components/note";
 import { PageIntro } from "@/components/page-intro";
 import { handUpLatest } from "@/lib/facts";
 import type { Metadata } from "next";
@@ -16,13 +15,13 @@ export default function EventsPage() {
       <PageIntro
         eyebrow="Events"
         title="Meetings, lunch, and save-the-dates"
-        lede="Regular gatherings, dated events, and dates whose time or place is not listed."
+        lede="Regular gatherings and the next dated events."
       />
-      <div className="mx-auto max-w-3xl space-y-12 px-5 py-14">
+      <div className="mx-auto max-w-6xl [&>*]:max-w-3xl space-y-12 px-5 py-12">
         <section className="space-y-6">
-          <h2 className="text-4xl text-ink">Recurring</h2>
+          <h2 className="section-title">Recurring</h2>
           <article>
-            <h3 className="text-2xl text-ink">Helping Hands Meeting</h3>
+            <h3 className="card-title">Helping Hands Meeting</h3>
             <p className="mt-2">
               First Monday of each month, 10:30 a.m.–12:00 p.m., Chapel. You are
               invited to hear the many ways God is moving in this community and how
@@ -31,19 +30,17 @@ export default function EventsPage() {
             </p>
           </article>
           <article>
-            <h3 className="text-2xl text-ink">First Thursday Lunch</h3>
+            <h3 className="card-title">First Thursday Lunch</h3>
             <p className="mt-2">
-              First Thursday, September–May, 11:00 a.m.–1:00 p.m. A complete meal
-              with dessert and a drink is $10. 8x8 pies are $12. The published
-              location is FLC.
+              First Thursday, September–May, 11:00 a.m.–1:00 p.m., in the FLC. A
+              complete meal with dessert and a drink is $10. 8x8 pies are $12.
             </p>
           </article>
           <article id="prayer-shawl">
-            <h3 className="text-2xl text-ink">Prayer Shawl Ministry</h3>
+            <h3 className="card-title">Prayer Shawl Ministry</h3>
             <p className="mt-2">
               Monthly, in the library. Sunday, October 18, 2026, 4:00–6:00 p.m.
-              The next prayer-shawl date after October 18, 2026 is not listed. New
-              knitters and crocheters are welcome.{" "}
+              New knitters and crocheters are welcome.{" "}
               <TextLink href="https://www.denverumc.org/events/prayer-shawl-ministry/2026-10-18">
                 Event page
               </TextLink>
@@ -55,15 +52,15 @@ export default function EventsPage() {
             </p>
           </article>
           <article>
-            <h3 className="text-2xl text-ink">Sewing Ladies</h3>
-            <p className="mt-2">Mondays, 9:00 a.m.–noon. The room is not listed.</p>
+            <h3 className="card-title">Sewing Ladies</h3>
+            <p className="mt-2">Mondays, 9:00 a.m.–noon.</p>
           </article>
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-4xl text-ink">Dated events</h2>
+          <h2 className="section-title">Dated events</h2>
           <article>
-            <h3 className="text-2xl text-ink">Monday, November 2, 2026</h3>
+            <h3 className="card-title">Monday, November 2, 2026</h3>
             <p className="mt-2">
               Helping Hands Meeting, 10:30 a.m.–12:00 p.m., Chapel.{" "}
               <TextLink href="https://www.denverumc.org/events/helping-hands-meeting/2026-11-02">
@@ -77,7 +74,7 @@ export default function EventsPage() {
             </p>
           </article>
           <article>
-            <h3 className="text-2xl text-ink">Thursday, November 5, 2026</h3>
+            <h3 className="card-title">Thursday, November 5, 2026</h3>
             <p className="mt-2">
               First Thursday Lunch, 11:00 a.m.–1:00 p.m., FLC.{" "}
               <TextLink href="https://www.denverumc.org/events/first-thursday-lunch/2026-11-05">
@@ -91,11 +88,10 @@ export default function EventsPage() {
             </p>
           </article>
           <article id="golf">
-            <h3 className="text-2xl text-ink">Monday, April 26, 2027</h3>
+            <h3 className="card-title">Monday, April 26, 2027</h3>
             <p className="mt-2">
               Charlie Blackburn Memorial Golf Tournament, 11:00 a.m.–6:00 p.m. Save
-              the Date. There is no course, fee, or registration link, and no place
-              is listed. The 2026 tournament was April 27.{" "}
+              the Date. The 2026 tournament was April 27.{" "}
               <TextLink href="https://www.denverumc.org/events/golf-tournament/2027-04-26">
                 Event page
               </TextLink>
@@ -105,29 +101,19 @@ export default function EventsPage() {
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-4xl text-ink">Dates not listed</h2>
-          <Note title="What is not listed">
-            <p>
-              December 7, 2026 is a later Helping Hands meeting. Its time and room
-              are not listed.
-            </p>
-            <p>
-              December 3, 2026 is a later First Thursday Lunch. Its details are not
-              listed.
-            </p>
-            <p>
-              The next prayer-shawl date after October 18, 2026 is not listed.
-            </p>
-            <p>
-              Rake &apos;n Run’s signup is the 2025 form. It names Saturday,
-              November 22, which has passed. That date is not this year’s event,
-              and it is not on this calendar.
-            </p>
-          </Note>
+          <h2 className="section-title">Rake &apos;n Run</h2>
+          <p>
+            The signup form is titled Rake &apos;n Run (2025) and says Saturday,
+            November 22. That Saturday has passed.{" "}
+            <TextLink href="https://forms.ministryforms.net/viewForm.aspx?formid=c0d0ff66-46d2-45e6-a3bd-a75e70d8ec48">
+              Open the 2025 form
+            </TextLink>
+            .
+          </p>
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-4xl text-ink">From the October 2026 Hand Up</h2>
+          <h2 className="section-title">From the October 2026 Hand Up</h2>
           <p>
             These dates are from the October 2026 issue,{" "}
             <TextLink href={handUpLatest.href}>{handUpLatest.label}</TextLink>.
@@ -137,7 +123,7 @@ export default function EventsPage() {
           <ul className="list-disc space-y-3 pl-5">
             <li>
               October 15 — Sunrise Fall Festival. Volunteer help and donations are
-              needed. Contact Lea. No last name or email is listed.
+              needed. Contact Lea.
             </li>
             <li>
               October 17 — Apple Fest 5K, United Way of Lincoln County, 8:00 a.m.,
@@ -153,7 +139,8 @@ export default function EventsPage() {
             </li>
             <li>
               October 24 — David Moves, Edisto Island Half-Triathlon, Helping Hands
-              fundraiser.
+              fundraiser.{" "}
+              <TextLink href="/david-garmon">David Garmon&apos;s fundraiser</TextLink>
             </li>
             <li>
               October 24 — Soul to Soul “Soles for Souls” trail run. Registration
@@ -197,8 +184,7 @@ export default function EventsPage() {
             </li>
             <li>
               November 14 — McAdams Free Clinic Community Care Day, 9:00 a.m.–1:00
-              p.m., on the East Lincoln Christian Ministry campus. Contact Gail. No
-              last name or email is listed.
+              p.m., on the East Lincoln Christian Ministry campus. Contact Gail.
             </li>
           </ul>
           <p>

@@ -17,4 +17,4 @@ Open [http://127.0.0.1:43123](http://127.0.0.1:43123).
 
 Home, Get Help, Programs, Volunteer, Donate, Events, About, and Contact.
 
-Donations leave this site for the published “Support Helping Hands!” form. There is no contact form and no get-help form, because none is published.
+Donations leave the site for the published “Support Helping Hands!” form. The Get Help request form is visible and does not send or store messages.

@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Write Helping Hands at helpinghandsdenvernc@gmail.com, or use a ministry contact. There is no contact form.",
+    "Write Helping Hands at helpinghandsdenvernc@gmail.com, or use a ministry contact.",
 };
 
 export default function ContactPage() {
@@ -19,17 +19,15 @@ export default function ContactPage() {
         lede={
           <>
             The Helping Hands email is{" "}
-            <TextLink href={`mailto:${hhEmail}`}>{hhEmail}</TextLink>. There is no
-            contact form.
+            <TextLink href={`mailto:${hhEmail}`}>{hhEmail}</TextLink>.
           </>
         }
       />
-      <div className="mx-auto max-w-6xl space-y-12 px-5 py-14">
-        <Note title="No Helping Hands phone or street address">
+      <div className="mx-auto max-w-6xl space-y-12 px-5 py-12">
+        <Note title="Church phone and building">
           <p>
-            No Helping Hands phone, street address, mailing address, or office
-            hours are listed. Use the church contacts below for the church phone
-            and building. Beth Bynum at{" "}
+            Use the church contacts below for the church phone and building. Beth
+            Bynum at{" "}
             <TextLink href="mailto:receptionist@denverumc.org">
               receptionist@denverumc.org
             </TextLink>{" "}
@@ -38,13 +36,13 @@ export default function ContactPage() {
         </Note>
 
         <section className="space-y-4">
-          <h2 className="text-4xl text-ink">Ministry contacts</h2>
+          <h2 className="section-title">Ministry contacts</h2>
           <p>
-            Carol Brown has two email addresses, and both are listed. Furnish a
-            Future has two Tuesday sorting times; see{" "}
-            <TextLink href="/programs#furnish-a-future">Furnish a Future</TextLink>
-            . Amy Ramsey and Amber Mayo are both listed for foster-family
-            questions.
+            Carol Brown uses outreach@denverumc.org. Christmas stocking items use
+            carol.brown@denverumc.org. Furnish a Future sorting is Tuesdays 10:00
+            a.m.–noon, and the October newsletter also says 9:00–11:00 a.m. Amy
+            Ramsey answers Lincoln County DSS questions. The October newsletter
+            gives Amber Mayo for foster families.
           </p>
           <div className="overflow-x-auto border-y border-border">
             <table className="w-full min-w-[44rem] text-left text-sm">
@@ -60,7 +58,7 @@ export default function ContactPage() {
                     Contact
                   </th>
                   <th scope="col" className="px-4 py-3 font-semibold">
-                    Where listed
+                    Ministry
                   </th>
                 </tr>
               </thead>
@@ -87,7 +85,7 @@ export default function ContactPage() {
         </section>
 
         <section className="border-t border-border pt-10">
-          <h2 className="text-4xl text-ink">{church.name}</h2>
+          <h2 className="section-title">{church.name}</h2>
           <p className="mt-3 max-w-2xl">
             This block is the church, the place Helping Hands was founded and where
             several activities happen. It is not a Helping Hands office listing.

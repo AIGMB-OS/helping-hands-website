@@ -69,7 +69,7 @@ export const programs: Program[] = [
     group: "food",
     paragraphs: [
       "The Little Pantry is located in DUMC's parking lot and provides food to anyone who needs it, no questions asked. Volunteers are needed to provide non-perishable food and to help fill the pantry daily.",
-      "The parking lot is at Denver United Methodist Church, 3910 N. Hwy 16 Business, Denver, NC 28037. That street address is the church’s. Helping Hands does not list its own address. There is no inventory list, and no hours beyond daily filling.",
+      "The parking lot is at Denver United Methodist Church, 3910 N. Hwy 16 Business, Denver, NC 28037.",
     ],
     contacts: [
       {
@@ -120,7 +120,6 @@ export const programs: Program[] = [
     paragraphs: [
       "The Community Garden provides a consistent, local source for free, fresh produce to struggling neighbors, while promoting a healthy lifestyle. Produce goes to food-insecure families through Backpacks for Kids, the Little Pantry in the parking lot, and East Lincoln Christian Ministries.",
       "Volunteers from the community are welcome to harvest vegetables and maintain the garden. Both new and experienced gardeners are welcome.",
-      "A regular location and workday hour are not listed.",
     ],
     contacts: [
       {
@@ -129,7 +128,7 @@ export const programs: Program[] = [
       },
     ],
     notes: [
-      "Carol Brown is listed two ways. The garden and Birdies list outreach@denverumc.org. Christmas stockings list carol.brown@denverumc.org.",
+      "Garden questions use outreach@denverumc.org. Christmas stocking items use carol.brown@denverumc.org.",
       "The October newsletter invites people to a Community Garden workday at Denver United Methodist Church on October 24 at 8:00 a.m.",
     ],
   },
@@ -143,7 +142,6 @@ export const programs: Program[] = [
     group: "food",
     paragraphs: [
       "The Asbury Resource Center offers free, like-new clothing, socks, underwear, and shoes to any child in Lincoln County needing these items. Most are referred through school counselors and social workers or Sunrise Resource outreach. Volunteers sort donations and assist families when shopping.",
-      "Hours and an address are not listed.",
     ],
     contacts: [
       {
@@ -168,7 +166,6 @@ export const programs: Program[] = [
       "Published needs: new or gently used mattresses, box springs, beds, bedding, and pillows in queen, full, or twin. No King sizes please. Kitchen items: microwaves, toaster ovens, pots and pans, table service and tableware. Living room and bedroom furniture, especially sofas. Appliances: washer/dryers, refrigerators.",
       "Please do not give large furniture, window treatments, pictures, books, decorative items, or king-size beds or linens.",
       "To donate, email faf@denverumc.org and attach a picture if possible, or call (704) 269-2875.",
-      "There is no public request form, and eligibility rules for asking for furniture are not listed.",
     ],
     schedule: [
       "Sorting: Tuesdays 10:00 a.m.–noon. Contact Dale Webster at faf@denverumc.org.",
@@ -181,8 +178,8 @@ export const programs: Program[] = [
       { label: "Dennis Lee, moving team, lkndawg@yahoo.com", href: "mailto:lkndawg@yahoo.com" },
     ],
     notes: [
-      "Tuesday hours are listed two ways. One schedule is Tuesdays 10:00 a.m.–noon. The October newsletter says “Mission Depot is open Tues 9:00–11:00 am or by appointment,” and “Every Tues — Sort donations for Furnish a Future, 9:00–11:00 am.”",
-      "The October newsletter says Furnish a Future provided 33 beds to families in need last month, compared with 66 beds provided year to date until then, and 171 volunteer hours served 26 families. A Walmart list is mentioned. No link is given.",
+      "Sorting is Tuesdays 10:00 a.m.–noon. The October newsletter also says Mission Depot is open Tuesdays 9:00–11:00 a.m., or by appointment, and that sorting is 9:00–11:00 a.m.",
+      "The October newsletter says Furnish a Future provided 33 beds to families in need last month, compared with 66 beds provided year to date until then, and 171 volunteer hours served 26 families. It mentions a Walmart list.",
     ],
   },
   {
@@ -226,8 +223,7 @@ export const programs: Program[] = [
     group: "families",
     paragraphs: [
       "The Birdies group is a partnership between Helping Hands and the Lincoln County Schools social workers to fill the needs of children in local schools. They provide lice kits, and caps and gowns for students whose families would be burdened by the added expenses. They provide 100 filled Christmas stockings for middle and high school students chosen by those social workers, and address other family needs that are identified by these Birdies.",
-      "This program is funded through the First Thursday Lunch fundraiser.",
-      "Requests go through the school social workers. There is no public application.",
+      "This program is funded through the First Thursday Lunch fundraiser. Requests go through the school social workers.",
     ],
     contacts: [
       {
@@ -240,7 +236,6 @@ export const programs: Program[] = [
       },
     ],
     notes: [
-      "Two email addresses are listed for Carol Brown, and they are not the same.",
       "The October newsletter says: “We are filling 100 Christmas Stocking for local Middle and High School Students! Email carol.brown@denverumc.org if you or a group you are a part of are interested in providing 50 or 100 of specific items.”",
     ],
   },
@@ -296,7 +291,6 @@ export const programs: Program[] = [
     group: "families",
     paragraphs: [
       "Love Denver is a completely free back-to-school event where we join with other churches to offer free backpacks full of school supplies, gently worn clothing, sports physicals, haircuts, groceries, games, crafts, lunch, and more to local families needing help to prepare for the upcoming school year.",
-      "No date, place, or contact is listed.",
     ],
     links: [{ label: "Love Denver website", href: "https://www.lovedenver.net/#" }],
   },
@@ -311,7 +305,6 @@ export const programs: Program[] = [
     group: "families",
     paragraphs: [
       "Moms & Munchkins is a FREE, nonprofit parenting program, offering individualized & group engagements.",
-      "A schedule, ages, and a location are not listed.",
     ],
     contacts: [
       {
@@ -326,8 +319,8 @@ export const programs: Program[] = [
       },
     ],
     notes: [
-      "Sunrise Resource Center uses the same email. How the two programs are connected is not listed.",
-      "The October newsletter thanks Furnish a Future for donated beds, and says volunteer help and donations are needed for a Fall Festival on October 15. Contact Lea. No last name or email for Lea is listed.",
+      "Sunrise Resource Center uses the same email.",
+      "The October newsletter thanks Furnish a Future for donated beds and asks for volunteer help and donations for a Fall Festival on October 15. Contact Lea.",
     ],
   },
   {
@@ -341,8 +334,7 @@ export const programs: Program[] = [
     group: "families",
     paragraphs: [
       "The goal of the SRC is to provide free services to moms, children, and families, seek ways to cultivate relationships, and grow community standards.",
-      "Programs offered to Sunrise residents: Parenting Classes; Finance/Budgeting Initiative; Women’s Bible Study; Boys/Girls Bible Study; Community Gatherings (festivals, cookouts); After-School and Summer Programs for Elementary and Middle School Children; Early Literacy Enrichment Opportunities; Supplemental Food Pantry; Emergency Assistance, and much more.",
-      "Where Sunrise is, who operates the housing, and when the programs meet are not listed. The supplemental food pantry is for Sunrise residents, not a public walk-up pantry.",
+      "Programs offered to Sunrise residents: Parenting Classes; Finance/Budgeting Initiative; Women’s Bible Study; Boys/Girls Bible Study; Community Gatherings (festivals, cookouts); After-School and Summer Programs for Elementary and Middle School Children; Early Literacy Enrichment Opportunities; Supplemental Food Pantry; Emergency Assistance, and much more. The supplemental food pantry is for Sunrise residents.",
     ],
     contacts: [
       {
@@ -361,7 +353,7 @@ export const programs: Program[] = [
     slug: "foster",
     name: "Foster Family Ministry",
     sentence:
-      "Foster Family Ministry is a set of partner listings. There is no single intake for this group.",
+      "Foster Family Ministry is a set of partner listings.",
     badge: "Partners",
     image: `${card}/2026/01/28/19/48/43/a5533257-e5e6-459a-9d8b-ee3609a1082d/Foster-Family.jpg`,
     detailImage: `${card}/2026/01/28/16/35/12/d204b318-4b27-41c3-8322-54445a5822a2/Foster-Family.jpg`,
@@ -437,8 +429,8 @@ export const programs: Program[] = [
       },
     ],
     notes: [
-      "The October newsletter says foster care in Lincoln County has 82 children in the system and 33 foster families. More families and supporting churches are needed. Email amber.mayo@lincolncountync.gov. Amy Ramsey is listed with the foster-family partners. Amber Mayo is listed in the October newsletter. They are different people.",
-      "A “Be Present” event is described as having been successful. No date is listed.",
+      "The October newsletter says foster care in Lincoln County has 82 children in the system and 33 foster families. More families and supporting churches are needed. Email Amber Mayo at amber.mayo@lincolncountync.gov.",
+      "The October newsletter describes a “Be Present” event as successful.",
       "The October newsletter lists Fostering Grace needs: Walmart and fast-food gift cards; diapers in sizes newborn, 1, and 2; a Denver-area storage unit.",
       "The October newsletter says Sipe’s Orchard Home supports residents 16–21 who do not have the financial, academic, emotional, or behavioral skills necessary for independent living.",
     ],
@@ -453,7 +445,6 @@ export const programs: Program[] = [
     group: "care",
     paragraphs: [
       "The Building & Repair Team builds handicap ramps and decks, and makes certain repairs to unsafe homes for those who cannot afford to make the repairs themselves.",
-      "Eligibility rules, a service area, a schedule, and a request form are not listed.",
     ],
     contacts: [
       {
@@ -462,7 +453,7 @@ export const programs: Program[] = [
       },
     ],
     notes: [
-      "The October newsletter says the team removed a metal ramp in September and had work scheduled for a Thursday. The date is not listed.",
+      "The October newsletter says the team removed a metal ramp in September and had work scheduled for a Thursday.",
     ],
   },
   {
@@ -475,9 +466,9 @@ export const programs: Program[] = [
     group: "care",
     paragraphs: [
       "Our wonderful Sewing Ladies meet on Monday mornings from 9:00 a.m.–noon. They make pillowcase dresses given to little girls around the world through regional and international mission teams, and stockings filled with toiletries and treats for local middle and high school students. They have also made embroidered walker tote bags for assisted living, quilts for a birthing center in Haiti, and costumes for a children’s Christmas play.",
-      "Volunteers can sew, measure, cut, or iron. No room is named. Monday mornings are the only schedule.",
+      "Volunteers can sew, measure, cut, or iron.",
     ],
-    schedule: ["Mondays, 9:00 a.m.–noon. Room not stated."],
+    schedule: ["Mondays, 9:00 a.m.–noon."],
     contacts: [
       {
         label: "Wanda Reynolds, wandareynolds@gmail.com",
@@ -519,9 +510,6 @@ export const programs: Program[] = [
         href: "https://www.denverumc.org/events/prayer-shawl-ministry/2026-10-18.ics",
       },
     ],
-    notes: [
-      "The next prayer-shawl date after October 18, 2026 is not listed.",
-    ],
   },
   {
     slug: "lakewood-tv",
@@ -555,11 +543,10 @@ export const programs: Program[] = [
     group: "care",
     paragraphs: [
       "Our annual Rake 'n Run is in partnership with East Lincoln Christian Ministries. Volunteers rake and remove leaves for those who would have a difficult time accomplishing the task without help. All ages are encouraged to participate.",
-      "No year, date, time, or contact is listed with the program.",
     ],
     notes: [
-      "Rake ’n Run’s signup is the 2025 form. It says: Join us Saturday, November 22nd, meet at 9:00 a.m. in the parking lot behind the Community Garden, bring family, friends, rakes, blowers and gas, trucks, leaf bags, and water. Contact Rich Benson, richjuliebenson@gmail.com. The event will be cancelled if the weather does not permit raking. The form asks for Your Name, Best Way to Reach You, Email, Phone, and How did you hear about Rake 'n run.",
-      "November 22, 2025 has passed. That date is not this year’s event, and no current date is listed.",
+      "The signup form is titled Rake 'n Run (2025). It says: Join us Saturday, November 22nd, meet at 9:00 a.m. in the parking lot behind the Community Garden, bring family, friends, rakes, blowers and gas, trucks, leaf bags, and water. Contact Rich Benson, richjuliebenson@gmail.com. The event will be cancelled if the weather does not permit raking.",
+      "November 22, 2025 has passed.",
     ],
     links: [
       { label: "Rake 'n Run (2025) form", href: "https://forms.ministryforms.net/viewForm.aspx?formid=c0d0ff66-46d2-45e6-a3bd-a75e70d8ec48" },
@@ -640,7 +627,7 @@ export const programs: Program[] = [
     paragraphs: [
       "Formerly Heartbeats. “BE A PARTNER IN CHANGING HEARTS & SAVING LIVES.”",
       "With nearly 800 abortions taking place in our county each year, your help is vital to saving lives.",
-      "Harbour Health asks people to spread awareness about abortion in the area. No local phone, hours, or address are listed.",
+      "Harbour Health asks people to spread awareness about abortion in the area.",
     ],
     links: [{ label: "Harbour Health website", href: "https://supportheartbeats.org/" }],
     notes: [
@@ -660,7 +647,6 @@ export const programs: Program[] = [
       "Amy's Closet is a Not-for-Profit resale shop that benefits Amy's House (Lincoln County Coalition Against Domestic Violence, a 501(c)3 organization).",
       "1584B Hwy 16, Denver, (704) 483-5515.",
       "849 S. Laurel St., Lincolnton, (704) 240-3688.",
-      "Store hours are not listed.",
     ],
     contacts: [
       { label: "Denver store, (704) 483-5515", href: "tel:+17044835515" },
@@ -682,7 +668,7 @@ export const programs: Program[] = [
       },
     ],
     notes: [
-      "The October newsletter says Amy’s Closet sells like-new clothing to support Amy’s House, is open Tuesday–Saturday starting at 10:00 a.m., and that volunteer applications are available in the stores. A closing time is not listed.",
+      "The October newsletter says Amy’s Closet sells like-new clothing to support Amy’s House, is open Tuesday–Saturday starting at 10:00 a.m., and that volunteer applications are available in the stores.",
     ],
   },
   {
@@ -721,7 +707,7 @@ export const programs: Program[] = [
       "First Thursday Lunch is prepared and sold to the community on the first Thursday of each month (September–May). Lunch options include chicken pie or baked spaghetti with sides or a hot dog meal. All proceeds help local children and their families.",
       "A complete meal with dessert and a drink is $10. 8x8 pies are $12.",
       "This is a fundraiser, not a free pantry. Birdies says it is funded through this lunch.",
-      "Volunteer times: Wednesday before the lunch at 9:00 a.m. in the FLC to pick chicken, and Thursday 11:00 a.m.–1:00 p.m. to serve and clean up. The published location is FLC.",
+      "Volunteer times: Wednesday before the lunch at 9:00 a.m. in the FLC to pick chicken, and Thursday 11:00 a.m.–1:00 p.m. to serve and clean up. The location is FLC.",
       "Delicious homemade desserts are always appreciated.",
       "Pie orders: call the church office or email Beth Bynum, receptionist@denverumc.org. The church office phone is 704-483-1601.",
     ],
@@ -752,9 +738,6 @@ export const programs: Program[] = [
         href: "https://www.denverumc.org/events/first-thursday-lunch/2026-11-05.ics",
       },
     ],
-    notes: [
-      "December 3, 2026 is a later lunch date. Its details are not listed.",
-    ],
   },
   {
     slug: "golf",
@@ -767,9 +750,9 @@ export const programs: Program[] = [
     paragraphs: [
       "Our annual golf tournament supports our many ministries, is a great day of fellowship, and helps spread the word to anyone looking for local outreach opportunities.",
       "Visit the Denver UMC Facebook page for pictures from the 2026 tournament held on April 27.",
-      "There is no course, fee, or registration link. The next date is Monday, April 26, 2027, 11:00 a.m.–6:00 p.m. Save the Date. No place is listed.",
+      "The next date is Monday, April 26, 2027, 11:00 a.m.–6:00 p.m. Save the Date.",
     ],
-    schedule: ["Monday, April 26, 2027, 11:00 a.m.–6:00 p.m. Save the Date. No place is listed."],
+    schedule: ["Monday, April 26, 2027, 11:00 a.m.–6:00 p.m. Save the Date."],
     links: [
       {
         label: "2026 tournament pictures on Facebook",

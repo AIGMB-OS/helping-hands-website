@@ -1,13 +1,14 @@
 import { TextLink } from "@/components/button-link";
-import { Note } from "@/components/note";
+import { RequestAssistanceForm } from "@/components/request-assistance-form";
 import { PageIntro } from "@/components/page-intro";
 import { church } from "@/lib/facts";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Get Help",
   description:
-    "Ways a neighbor can find food, clothing, furniture, and partner services. There is no public get-help form.",
+    "Food, clothing, furniture, and other community resources from Helping Hands and partner organizations.",
 };
 
 export default function GetHelpPage() {
@@ -15,253 +16,389 @@ export default function GetHelpPage() {
     <main>
       <PageIntro
         eyebrow="Get Help"
-        title="What a neighbor can do"
-        lede="These are ways a neighbor can find help without joining a committee. There is no public get-help application, intake form, or confidentiality form."
+        title="We're here to help"
+        lede="Food, children’s clothing, and furniture are available through Helping Hands. Start with the ministry that fits, use the contact listed there, or send a request at the bottom of this page."
       />
-      <div className="mx-auto max-w-3xl space-y-12 px-5 py-14">
-        <Note title="No public get-help form">
-          <p>
-            There is no public form to request help from Helping Hands.
-          </p>
-        </Note>
-
-        <section aria-labelledby="food-heading" className="space-y-4">
-          <h2 id="food-heading" className="text-4xl text-ink">
-            Food
+      <div className="mx-auto max-w-6xl [&>*]:max-w-3xl space-y-10 px-5 py-12">
+        <section id="food" aria-labelledby="food-heading" className="scroll-mt-28 space-y-8">
+          <h2 id="food-heading" className="section-title">
+            Food Assistance
           </h2>
-          <h3 className="text-2xl text-ink">The Little Pantry</h3>
-          <p>
-            The Little Pantry is located in DUMC&apos;s parking lot and provides food
-            to anyone who needs it, no questions asked. Volunteers provide
-            non-perishable food and fill the pantry daily.
-          </p>
-          <p>
-            The parking lot is at {church.name}, {church.street}. That is the
-            church address. Hours beyond daily filling are not listed. Contact Darlene
-            Melton,{" "}
-            <TextLink href="mailto:marvinjmelton@bellsouth.net">
-              marvinjmelton@bellsouth.net
-            </TextLink>
-            .
-          </p>
-          <h3 className="pt-4 text-2xl text-ink">Backpacks for Kids</h3>
-          <p>
-            Backpacks for Kids provides food for children at Rock Springs
-            Elementary, North Lincoln Middle and High, and Lincoln Charter to have
-            on weekends, school breaks, and holidays. Volunteers pack and deliver
-            food to the schools. It is not a public walk-up pantry.
-          </p>
-          <p>
-            Julie Doss,{" "}
-            <TextLink href="mailto:julieadoss@gmail.com">julieadoss@gmail.com</TextLink>
-            . Jamie Sidler,{" "}
-            <TextLink href="mailto:jsidler07@hotmail.com">jsidler07@hotmail.com</TextLink>
-            .
-          </p>
-          <h3 className="pt-4 text-2xl text-ink">Community Garden produce</h3>
-          <p>
-            The garden provides free fresh produce to struggling neighbors and
-            food-insecure families. Produce goes out through Backpacks for Kids,
-            the Little Pantry in the parking lot, and East Lincoln Christian
-            Ministries. No public pickup hour is listed.
-          </p>
-          <h3 className="pt-4 text-2xl text-ink">East Lincoln Christian Ministry</h3>
-          <p>
-            Partner. ELCM provides financial assistance for neighbors experiencing
-            an economic crisis, a grocery cart full of food and toiletries, and
-            clothing for families who need them.
-          </p>
-          <p>
-            4278 Catawba Burris Rd., Denver, NC.{" "}
-            <TextLink href="tel:+17044834415">(704) 483-4415</TextLink>. Tuesday,
-            Thursday, and Saturday, 9:00 to noon.
-          </p>
-          <Note title="October 2026 newsletter">
+          <HelpItem title="The Little Pantry" href="/programs/the-little-pantry">
             <p>
-              ELCM is accepting Thanksgiving donations of turkeys and hams. Contact
-              Charlie Cicio at{" "}
+              The Little Pantry is in the parking lot at {church.name}, {church.street},
+              and provides food to anyone who needs it, no questions asked. Volunteers
+              fill it daily with non-perishable food.
+            </p>
+            <p>
+              Darlene Melton,{" "}
+              <TextLink href="mailto:marvinjmelton@bellsouth.net">
+                marvinjmelton@bellsouth.net
+              </TextLink>
+              .
+            </p>
+          </HelpItem>
+          <HelpItem title="Backpacks for Kids" href="/programs/backpacks-for-kids">
+            <p>
+              Backpacks for Kids provides food for children at Rock Springs Elementary,
+              North Lincoln Middle and High, and Lincoln Charter to have on weekends,
+              school breaks, and holidays. Volunteers pack and deliver food to the
+              schools.
+            </p>
+            <p>
+              Julie Doss,{" "}
+              <TextLink href="mailto:julieadoss@gmail.com">julieadoss@gmail.com</TextLink>
+              . Jamie Sidler,{" "}
+              <TextLink href="mailto:jsidler07@hotmail.com">jsidler07@hotmail.com</TextLink>
+              .
+            </p>
+          </HelpItem>
+          <HelpItem title="Community Garden" href="/programs#community-garden">
+            <p>
+              The Community Garden provides free fresh produce to struggling neighbors.
+              Produce goes to food-insecure families through Backpacks for Kids, the
+              Little Pantry, and East Lincoln Christian Ministries.
+            </p>
+            <p>
+              Carol,{" "}
+              <TextLink href="mailto:outreach@denverumc.org">outreach@denverumc.org</TextLink>
+              .
+            </p>
+          </HelpItem>
+          <HelpItem
+            title="East Lincoln Christian Ministry"
+            href="/programs#elcm"
+            badge="Partner"
+          >
+            <p>
+              ELCM provides financial assistance for neighbors experiencing an economic
+              crisis, a grocery cart full of food and toiletries, and clothing for
+              families who need them.
+            </p>
+            <p>
+              4278 Catawba Burris Rd., Denver, NC.{" "}
+              <TextLink href="tel:+17044834415">(704) 483-4415</TextLink>. Tuesday,
+              Thursday, and Saturday, 9:00 to noon.
+            </p>
+            <p>
+              The October 2026 newsletter says ELCM is accepting Thanksgiving donations
+              of turkeys and hams. Charlie Cicio,{" "}
               <TextLink href="tel:+16314558989">631-455-8989</TextLink>.
             </p>
-          </Note>
+          </HelpItem>
+          <HelpItem
+            title="Sunrise Resource Center pantry"
+            href="/programs#sunrise"
+            badge="Sunrise residents"
+          >
+            <p>
+              Sunrise Resource Center includes a supplemental food pantry and emergency
+              assistance among programs offered to Sunrise residents.
+            </p>
+            <p>
+              <TextLink href="mailto:momsandmunchkinsnc@gmail.com">
+                momsandmunchkinsnc@gmail.com
+              </TextLink>
+            </p>
+          </HelpItem>
         </section>
 
-        <section aria-labelledby="clothing-heading" className="space-y-4">
-          <h2 id="clothing-heading" className="text-4xl text-ink">
-            Clothing
+        <section id="clothing" aria-labelledby="clothing-heading" className="scroll-mt-28 space-y-8">
+          <h2 id="clothing-heading" className="section-title">
+            Clothing Assistance
           </h2>
-          <p>
-            The Asbury Resource Center offers free, like-new clothing, socks,
-            underwear, and shoes to any child in Lincoln County needing these
-            items. Most are referred through school counselors and social workers
-            or Sunrise Resource outreach. Volunteers sort donations and assist
-            families when shopping.
-          </p>
-          <p>
-            Hours and an address are not listed. Leslie Barlowe,{" "}
-            <TextLink href="mailto:lesliebarlowe@gmail.com">
-              lesliebarlowe@gmail.com
-            </TextLink>
-            .
-          </p>
+          <HelpItem title="Asbury Resource Center" href="/programs/asbury-resource-center">
+            <p>
+              The Asbury Resource Center offers free, like-new clothing, socks,
+              underwear, and shoes to any child in Lincoln County needing these items.
+              Most are referred through school counselors and social workers or Sunrise
+              Resource outreach.
+            </p>
+            <p>
+              Leslie Barlowe,{" "}
+              <TextLink href="mailto:lesliebarlowe@gmail.com">lesliebarlowe@gmail.com</TextLink>
+              .
+            </p>
+          </HelpItem>
+          <HelpItem
+            title="Amy's Closet & Amy's House"
+            href="/programs#amys"
+            badge="Partner"
+          >
+            <p>
+              Amy&apos;s Closet is a not-for-profit resale shop that benefits Amy&apos;s
+              House (Lincoln County Coalition Against Domestic Violence). The October
+              newsletter says it sells like-new clothing and is open Tuesday–Saturday
+              starting at 10:00 a.m.
+            </p>
+            <p>
+              1584B Hwy 16, Denver,{" "}
+              <TextLink href="tel:+17044835515">(704) 483-5515</TextLink>. 849 S. Laurel
+              St., Lincolnton,{" "}
+              <TextLink href="tel:+17042403688">(704) 240-3688</TextLink>.
+            </p>
+            <p>
+              <TextLink href="https://lincolncounty-cadv.org/">Amy&apos;s House</TextLink>
+            </p>
+          </HelpItem>
+          <HelpItem title="East Lincoln Christian Ministry" href="#food" badge="Partner">
+            <p>
+              ELCM also provides clothing for families who need it, along with food and
+              financial assistance. Hours and address are with{" "}
+              <TextLink href="#food">Food Assistance</TextLink>.
+            </p>
+          </HelpItem>
         </section>
 
-        <section aria-labelledby="goods-heading" className="space-y-4">
-          <h2 id="goods-heading" className="text-4xl text-ink">
-            Home goods
+        <section id="furniture" aria-labelledby="furniture-heading" className="scroll-mt-28 space-y-8">
+          <h2 id="furniture-heading" className="section-title">
+            Furniture &amp; Household Items
           </h2>
-          <p>
-            Furnish a Future accepts donated furniture and household goods and
-            gives it to neighbors leaving domestic abuse, homelessness, or other
-            situations that have left them with little or no furniture or means to
-            purchase it.
-          </p>
-          <p>There is no public request form.</p>
-          <p>
-            To offer an item, email{" "}
-            <TextLink href="mailto:faf@denverumc.org">faf@denverumc.org</TextLink>{" "}
-            and attach a picture if possible, or call{" "}
-            <TextLink href="tel:+17042692875">(704) 269-2875</TextLink>.
-          </p>
-          <p>
-            Needs include mattresses, box springs, beds, bedding, and
-            pillows in queen, full, or twin (no king sizes); microwaves, toaster
-            ovens, pots and pans, table service and tableware; living room and
-            bedroom furniture, especially sofas; and washer/dryers and
-            refrigerators.
-          </p>
-          <p>
-            Please do not give large furniture, window treatments,
-            pictures, books, decorative items, or king-size beds or linens.
-          </p>
-          <p>
-            <TextLink href="/programs#furnish-a-future">
-              Furnish a Future details, including both Tuesday hours
-            </TextLink>
-          </p>
+          <HelpItem title="Furnish a Future" href="/programs/furnish-a-future">
+            <p>
+              Furnish a Future accepts donated furniture and household goods and gives
+              them to neighbors leaving domestic abuse, homelessness, or other
+              situations that have left them with little or no furniture.
+            </p>
+            <p>
+              To offer an item, email{" "}
+              <TextLink href="mailto:faf@denverumc.org">faf@denverumc.org</TextLink> and
+              attach a picture if possible, or call{" "}
+              <TextLink href="tel:+17042692875">(704) 269-2875</TextLink>.
+            </p>
+            <p>
+              Needs include mattresses, box springs, beds, bedding, and pillows in
+              queen, full, or twin (no king sizes); microwaves, toaster ovens, pots and
+              pans, table service and tableware; living room and bedroom furniture,
+              especially sofas; and washer/dryers and refrigerators.
+            </p>
+            <p>
+              Please do not give large furniture, window treatments, pictures, books,
+              decorative items, or king-size beds or linens.
+            </p>
+            <p>
+              Sorting is Tuesdays 10:00 a.m.–noon with Dale Webster at{" "}
+              <TextLink href="mailto:faf@denverumc.org">faf@denverumc.org</TextLink>.
+              The October newsletter also says Mission Depot is open Tuesdays
+              9:00–11:00 a.m., or by appointment.
+            </p>
+          </HelpItem>
         </section>
 
-        <section aria-labelledby="housing-heading" className="space-y-4">
-          <h2 id="housing-heading" className="text-4xl text-ink">
-            Housing help and shelters
+        <section id="other" aria-labelledby="other-heading" className="scroll-mt-28 space-y-8">
+          <h2 id="other-heading" className="section-title">
+            Other Community Resources
           </h2>
-          <p>
-            These are partner organizations. They are not a Helping Hands walk-in
-            office.
-          </p>
-          <h3 className="text-2xl text-ink">Soul to Soul Outreach</h3>
-          <p>
-            Works to meet the needs of the homeless and indigent through advocacy,
-            connection to resources, and spiritual guidance.{" "}
-            <TextLink href="tel:+17049667785">(704) 966-7785</TextLink>.{" "}
-            <TextLink href="mailto:soultosouloutreach22@gmail.com">
-              soultosouloutreach22@gmail.com
-            </TextLink>
-            .{" "}
-            <TextLink href="https://www.soultosouloutreach.org/">
-              soultosouloutreach.org
-            </TextLink>
-            .
-          </p>
-          <h3 className="text-2xl text-ink">The Hesed House of Hope</h3>
-          <p>
-            A non-profit organization and currently the only homeless shelter in
-            Lincoln County.{" "}
-            <TextLink href="https://www.hesedhouseofhope.com/">
-              hesedhouseofhope.com
-            </TextLink>
-            . No phone is listed.
-          </p>
-          <h3 className="text-2xl text-ink">Journey of Hope</h3>
-          <p>
-            Helps those experiencing chronic homelessness and/or those in danger of
-            becoming homeless by providing love, support, and tangible items that
-            are needed daily. It provides Christ-centered services
-            through outreach, food/meals, blessing bags, and advocacy.{" "}
-            <TextLink href="https://www.journeyofhopeministry.com/">
-              journeyofhopeministry.com
-            </TextLink>
-            .
-          </p>
-          <h3 className="text-2xl text-ink">Room in the Inn</h3>
-          <p>
-            Dinner, showers, a warm bed, and breakfast with other local churches in
-            the summer for respite from the heat and in the winter for relief from
-            the cold. Interested in volunteering? Text RITI to 980-389-7674.
-          </p>
+          <HelpItem title="Building & Repair Team" href="/programs#building-repair">
+            <p>
+              The Building &amp; Repair Team builds handicap ramps and decks, and makes
+              certain repairs to unsafe homes for those who cannot afford the repairs
+              themselves.
+            </p>
+            <p>
+              Wally Mlynarski,{" "}
+              <TextLink href="mailto:wzm.fish@gmail.com">wzm.fish@gmail.com</TextLink>.
+            </p>
+          </HelpItem>
+          <HelpItem title="Birdies" href="/programs#birdies">
+            <p>
+              Birdies is a partnership between Helping Hands and Lincoln County Schools
+              social workers. They provide lice kits, caps and gowns, and 100 filled
+              Christmas stockings for middle and high school students chosen by those
+              social workers.
+            </p>
+            <p>
+              Carol Brown,{" "}
+              <TextLink href="mailto:outreach@denverumc.org">outreach@denverumc.org</TextLink>
+              . For Christmas stocking items, the October newsletter uses{" "}
+              <TextLink href="mailto:carol.brown@denverumc.org">
+                carol.brown@denverumc.org
+              </TextLink>
+              .
+            </p>
+          </HelpItem>
+          <HelpItem title="Love Denver" href="/programs#love-denver">
+            <p>
+              Love Denver is a free back-to-school event with other churches: backpacks
+              of school supplies, gently worn clothing, sports physicals, haircuts,
+              groceries, games, crafts, lunch, and more.
+            </p>
+            <p>
+              <TextLink href="https://www.lovedenver.net/#">lovedenver.net</TextLink>
+            </p>
+          </HelpItem>
+          <HelpItem title="Moms & Munchkins" href="/programs#moms-munchkins" badge="Partner">
+            <p>
+              Moms &amp; Munchkins is a free, nonprofit parenting program, offering
+              individualized and group engagements.
+            </p>
+            <p>
+              <TextLink href="mailto:MomsandMunchkinsnc@gmail.com">
+                MomsandMunchkinsnc@gmail.com
+              </TextLink>
+              .{" "}
+              <TextLink href="https://www.facebook.com/profile.php?id=100057396941921">
+                Facebook
+              </TextLink>
+              .
+            </p>
+          </HelpItem>
+          <HelpItem title="School Mentoring" href="/programs#school-mentoring">
+            <p>
+              Rock Springs mentors meet weekly with children. Asbury Academy volunteers
+              mentor, tutor, and teach job skills. Battleground Elementary focuses on
+              reading below grade level.
+            </p>
+            <p>
+              Mary Repko,{" "}
+              <TextLink href="mailto:repkomary@gmail.com">repkomary@gmail.com</TextLink>
+              . Christina Sutton,{" "}
+              <TextLink href="mailto:christinasuttontransition@gmail.com">
+                christinasuttontransition@gmail.com
+              </TextLink>
+              . Bob Smith,{" "}
+              <TextLink href="mailto:bobs709356@gmail.com">bobs709356@gmail.com</TextLink>
+              .
+            </p>
+          </HelpItem>
+          <HelpItem title="Foster family partners" href="/programs#foster" badge="Partners">
+            <p>
+              Foster Family Ministry lists Lincoln County DSS, The Advocate Mission,
+              Fostering Grace, the Child Advocacy Center, Sipe&apos;s Orchard Home, and
+              Guardian ad Litem. Each organization has its own site.
+            </p>
+            <p>
+              Amy Ramsey, Lincoln County DSS,{" "}
+              <TextLink href="mailto:amy.ramsey@lincolncountync.gov">
+                amy.ramsey@lincolncountync.gov
+              </TextLink>
+              . The October newsletter also gives Amber Mayo,{" "}
+              <TextLink href="mailto:amber.mayo@lincolncountync.gov">
+                amber.mayo@lincolncountync.gov
+              </TextLink>
+              , for foster families.
+            </p>
+            <p>
+              <TextLink href="https://www.lincolncountync.gov/265/Foster-Care-and-Adoption">
+                Lincoln County DSS
+              </TextLink>
+              .{" "}
+              <TextLink href="https://www.theadvocate.us/">The Advocate Mission</TextLink>
+              .{" "}
+              <TextLink href="https://fosteringgracenc.org/">Fostering Grace</TextLink>
+              .{" "}
+              <TextLink href="http://www.cac-lincolncounty.org/">
+                Child Advocacy Center
+              </TextLink>
+              .{" "}
+              <TextLink href="https://www.sipesorchardhome.org/">
+                Sipe&apos;s Orchard Home
+              </TextLink>
+              .
+            </p>
+          </HelpItem>
+          <HelpItem title="Homeless ministries" href="/programs#homeless" badge="Partners">
+            <p>
+              Soul to Soul Outreach works with people who are homeless through
+              advocacy, connection to resources, and spiritual guidance.{" "}
+              <TextLink href="tel:+17049667785">(704) 966-7785</TextLink>.{" "}
+              <TextLink href="mailto:soultosouloutreach22@gmail.com">
+                soultosouloutreach22@gmail.com
+              </TextLink>
+              .{" "}
+              <TextLink href="https://www.soultosouloutreach.org/">
+                soultosouloutreach.org
+              </TextLink>
+              .
+            </p>
+            <p>
+              The Hesed House of Hope is a nonprofit and currently the only homeless
+              shelter in Lincoln County.{" "}
+              <TextLink href="https://www.hesedhouseofhope.com/">
+                hesedhouseofhope.com
+              </TextLink>
+              .
+            </p>
+            <p>
+              Journey of Hope helps people experiencing chronic homelessness, or in
+              danger of becoming homeless, with outreach, meals, blessing bags, and
+              advocacy.{" "}
+              <TextLink href="https://www.journeyofhopeministry.com/">
+                journeyofhopeministry.com
+              </TextLink>
+              .
+            </p>
+            <p>
+              Room in the Inn provides dinner, showers, a warm bed, and breakfast with
+              other local churches, in summer for relief from the heat and in winter
+              for relief from the cold. Text RITI to 980-389-7674 to volunteer.
+            </p>
+          </HelpItem>
+          <HelpItem title="Prayer Shawl Ministry" href="/programs#prayer-shawl">
+            <p>
+              Prayer shawls are given for hope, comfort, and healing, and also to
+              celebrate happy occasions. The ministry meets monthly in the library.
+            </p>
+            <p>
+              Shawn Eudy,{" "}
+              <TextLink href="mailto:shawnwyatteudy52@gmail.com">
+                shawnwyatteudy52@gmail.com
+              </TextLink>
+              . Carla Freeman,{" "}
+              <TextLink href="mailto:freecef@aol.com">freecef@aol.com</TextLink>.
+            </p>
+          </HelpItem>
+          <HelpItem title="Harbour Health" href="/programs#harbour-health" badge="Partner">
+            <p>
+              Formerly Heartbeats. The ministry page links the Harbour Health website.
+              The October newsletter says Harbour Health (Heartbeats) Women&apos;s
+              Center provides free pregnancy tests, ultrasounds, counseling, and needed
+              supplies for women experiencing an unexpected pregnancy.
+            </p>
+            <p>
+              <TextLink href="https://supportheartbeats.org/">Harbour Health website</TextLink>
+            </p>
+          </HelpItem>
         </section>
 
-        <section aria-labelledby="students-heading" className="space-y-4">
-          <h2 id="students-heading" className="text-4xl text-ink">
-            Students and families
+        <section id="request" aria-labelledby="request-heading" className="scroll-mt-28 border-t border-border pt-12">
+          <h2 id="request-heading" className="section-title">
+            Request Help
           </h2>
-          <h3 className="text-2xl text-ink">Birdies</h3>
-          <p>
-            A partnership between Helping Hands and the Lincoln County Schools
-            social workers. Needs are filled for children in local schools,
-            including lice kits, caps and gowns, and 100 filled Christmas stockings
-            for middle and high school students chosen by those social workers.
-            This is not a public walk-up closet.
+          <p className="mt-4 max-w-2xl">
+            Share your name, a way to reach you, and the kind of help you need.
+            The contacts above are the way to reach a ministry directly.
           </p>
-          <p>
-            Carol Brown is listed at{" "}
-            <TextLink href="mailto:outreach@denverumc.org">
-              outreach@denverumc.org
-            </TextLink>
-            . For stocking items, the October newsletter lists{" "}
-            <TextLink href="mailto:carol.brown@denverumc.org">
-              carol.brown@denverumc.org
-            </TextLink>
-            . The two addresses are not the same.
-          </p>
-          <h3 className="text-2xl text-ink">Love Denver</h3>
-          <p>
-            A completely free back-to-school event with other churches: backpacks
-            of school supplies, gently worn clothing, sports physicals, haircuts,
-            groceries, games, crafts, lunch, and more. No date, place, or contact
-            is listed.
-          </p>
-          <p>
-            <TextLink href="https://www.lovedenver.net/#">lovedenver.net</TextLink>
-          </p>
-          <h3 className="text-2xl text-ink">Moms & Munchkins</h3>
-          <p>
-            A FREE, nonprofit parenting program, offering individualized & group
-            engagements. No schedule, ages, or location are listed.{" "}
-            <TextLink href="mailto:MomsandMunchkinsnc@gmail.com">
-              MomsandMunchkinsnc@gmail.com
-            </TextLink>
-            .
-          </p>
-          <h3 className="text-2xl text-ink">Sunrise Resource Center</h3>
-          <p>
-            Programs for Sunrise residents include parenting classes, a
-            finance/budgeting initiative, Bible studies, community gatherings,
-            after-school and summer programs, early literacy, a supplemental food
-            pantry, and emergency assistance. Where Sunrise is and who operates the
-            housing are not listed. The supplemental pantry is for Sunrise
-            residents, not a public walk-up.
-          </p>
-          <p>
-            <TextLink href="/programs#foster">Foster-care partner listings</TextLink>
-          </p>
-        </section>
-
-        <section aria-labelledby="repairs-heading" className="space-y-4">
-          <h2 id="repairs-heading" className="text-4xl text-ink">
-            Home repairs
-          </h2>
-          <p>
-            The Building & Repair Team builds handicap ramps and decks, and makes
-            certain repairs to unsafe homes for those who cannot afford to make the
-            repairs themselves.
-          </p>
-          <p>
-            Eligibility rules, a service area, a schedule, and a request form are
-            not listed. Wally Mlynarski,{" "}
-            <TextLink href="mailto:wzm.fish@gmail.com">wzm.fish@gmail.com</TextLink>.
-          </p>
+          <div className="mt-8 border border-border bg-card p-5 sm:p-8">
+            <RequestAssistanceForm />
+          </div>
         </section>
       </div>
     </main>
+  );
+}
+
+function HelpItem({
+  title,
+  href,
+  badge,
+  children,
+}: {
+  title: string;
+  href: string;
+  badge?: string;
+  children: ReactNode;
+}) {
+  return (
+    <article className="space-y-3 border-t border-border pt-6">
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <h3 className="card-title">{title}</h3>
+        {badge ? <p className="text-sm font-semibold text-pine">{badge}</p> : null}
+      </div>
+      <div className="space-y-3">{children}</div>
+      <p>
+        <TextLink href={href}>Ministry details</TextLink>
+      </p>
+    </article>
   );
 }

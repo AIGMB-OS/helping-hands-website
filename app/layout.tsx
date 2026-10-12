@@ -2,7 +2,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader, SkipLink } from "@/components/site-header";
 import { logoUrl, missionParagraph } from "@/lib/facts";
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
 const sans = Source_Sans_3({
@@ -12,9 +12,9 @@ const sans = Source_Sans_3({
   display: "swap",
 });
 
-const heading = Fraunces({
+const heading = Source_Serif_4({
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["400", "600", "700"],
   variable: "--font-heading",
   display: "swap",
 });
