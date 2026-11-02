@@ -45,6 +45,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </div>
         <SiteFooter />
+        <script
+          src="https://askaggy.com/widget.js"
+          data-widget-id="afd_83496fc9-277e-45b4-85b9-071e5136bb7b"
+          defer
+        />
       </body>
     </html>
   );

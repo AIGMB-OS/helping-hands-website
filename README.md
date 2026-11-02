@@ -2,7 +2,7 @@
 
 Standalone website for Helping Hands, an outreach ministry founded at Denver United Methodist Church in Denver, North Carolina. The public tagline is “Building Community Through Service.”
 
-The site repeats only facts published on the church’s Helping Hands pages, the files those pages link to, and the public forms those pages open. It does not take payments, store data, or include a chat widget.
+The site repeats only facts published on the church’s Helping Hands pages, the files those pages link to, and the public forms those pages open. It does not take payments or store data. The shared layout loads the existing Ask Aggy widget.
 
 ## Run locally
 

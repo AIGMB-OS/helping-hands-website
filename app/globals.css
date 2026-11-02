@@ -676,3 +676,9 @@ h4 {
     padding-left: 2rem;
   }
 }
+
+/* The Ask Aggy launcher uses a very high z-index. Keep the mobile menu above it while open. */
+[data-slot="sheet-overlay"],
+[data-slot="sheet-content"] {
+  z-index: 2147483001;
+}
