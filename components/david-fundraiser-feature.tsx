@@ -21,7 +21,13 @@ export function DavidFundraiserFeature({
       <div className="md:grid md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-center">
         {/* Original fundraiser graphic. Text below is HTML, not added to the file. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={davidFundraiserImage} alt={davidFundraiserAlt} className="media" />
+        <img
+          src={davidFundraiserImage}
+          alt={davidFundraiserAlt}
+          className="media"
+          loading="lazy"
+          decoding="async"
+        />
         <div className="p-5 md:p-6">
           <p className="label">Support Helping Hands</p>
           <Title className="section-title mt-2">{davidFundraiserTitle}</Title>

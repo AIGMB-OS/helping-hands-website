@@ -1,7 +1,6 @@
 "use client";
 
 import { logoUrl } from "@/lib/facts";
-import Image from "next/image";
 import { useState } from "react";
 
 export function LogoMark({
@@ -22,13 +21,16 @@ export function LogoMark({
   }
 
   return (
-    <Image
+    {/* The logo is already a small CDN file. Skipping the image optimizer avoids a slow Render resize. */}
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img
       src={logoUrl}
       alt="Helping Hands"
       width={670}
       height={350}
-      priority={priority}
       className={className}
+      decoding="async"
+      fetchPriority={priority ? "high" : "auto"}
       onError={() => setFailed(true)}
     />
   );

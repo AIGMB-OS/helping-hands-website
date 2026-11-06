@@ -22,7 +22,13 @@ export function ImageBanner({
     <div className="relative">
       {/* Banner art already includes its heading and button graphics. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={alt} className="block h-auto w-full" />
+      <img
+        src={src}
+        alt={alt}
+        className="block h-auto w-full"
+        loading="lazy"
+        decoding="async"
+      />
       {hotspots.map((spot) => {
         const className =
           "absolute z-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pine";

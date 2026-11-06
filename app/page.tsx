@@ -111,9 +111,11 @@ export default function HomePage() {
           </h2>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/get-help-photo.png"
+            src="/images/get-help-photo.jpg"
             alt="A volunteer hands a neighbor a box of groceries while others pack food nearby."
             className="media mt-5 rounded-lg"
+            loading="lazy"
+            decoding="async"
           />
           <div className="mt-4 grid grid-cols-1 items-stretch gap-3 md:grid-cols-2">
             {programs.map((program) => {
@@ -147,7 +149,7 @@ export default function HomePage() {
       </section>
 
       <ImageBanner
-        src="/images/the-hand-up.png"
+        src="/images/the-hand-up.jpg"
         alt="The Hand Up"
         hotspots={[
           {
@@ -198,9 +200,11 @@ export default function HomePage() {
       <section aria-labelledby="spotlight-heading">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/community-spotlight-photo.png"
+          src="/images/community-spotlight-photo.jpg"
           alt="A volunteer handing a backpack to a child at an outdoor giveaway."
           className="media"
+          loading="lazy"
+          decoding="async"
         />
         <div className="spotlight-band">
           <div className="wrap section">

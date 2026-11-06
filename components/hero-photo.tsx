@@ -24,6 +24,8 @@ export function HomeHero() {
         src="/hero.jpg"
         alt="Volunteers handing over a box of donated food"
         className="media"
+        fetchPriority="high"
+        decoding="async"
       />
       <div className="wrap section">
         <div className="mission-grid">

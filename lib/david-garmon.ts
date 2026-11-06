@@ -1,4 +1,4 @@
-export const davidFundraiserImage = "/images/david-garmon-fundraiser.png";
+export const davidFundraiserImage = "/images/david-garmon-fundraiser.jpg";
 
 export const davidFundraiserAlt =
   "Support. David Garmon swimming 1.2 miles, biking 56 miles, and running 13.1 miles, so our neighbors can move forward.";
